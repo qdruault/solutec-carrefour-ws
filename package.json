@@ -1,0 +1,33 @@
+{
+  "name": "zxing-ws",
+  "version": "1.0.0",
+  "description": "Web Service to query the Carrefour database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "populate": "node ./database/populate"
+  },
+  "author": [
+    "Quentin DRUAULT-AUBIN",
+    "Pierre HEMERY"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
+    "express": "^4.16.2",
+    "express-winston": "^2.5.0",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.2.1",
+    "moment": "^2.21.0",
+    "multer": "^1.3.0",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.36.1",
+    "winston": "^2.4.1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "port": 3000,
+  "database": {
+    "host": "localhost",
+    "database": "carrefour",
+    "timezone": "+01:00",
+    "username": "root",
+    "password": "",
+    "dialect": "mysql",
+    "logging": false,
+    "port": 3306
+  }
+}
