@@ -10,22 +10,22 @@ function populateCoworker() {
       },
       {
         lastName: "Dubois",
-        firstName: "Rémi",
+        firstName: "Marie",
         isManager: faker.random.boolean()
       },
       {
         lastName: "Martin",
-        firstName: "Jean",
+        firstName: "Pierre",
         isManager: faker.random.boolean()
       },
       {
         lastName: "Lefevebre",
-        firstName: "Louis",
+        firstName: "Louise",
         isManager: faker.random.boolean()
       },
 
     ];
-    
+
     return Coworker.bulkCreate(fakeCoworkers);
 }
 

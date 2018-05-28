@@ -10,7 +10,6 @@ function populateSupplier() {
       fakeSuppliers.push({
           id: supplier,
           name: supplierName,
-          idCountry: country,
       })
     }
 
