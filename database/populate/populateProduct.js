@@ -25,6 +25,18 @@ function populateProduct() {
         price: faker.commerce.price(1, 100, 2),
         stock: faker.random.number()
       },
+      {
+        barcode: '5003003672859',
+        name: "Crunch Flakes",
+        price: faker.commerce.price(1, 100, 2),
+        stock: faker.random.number()
+      },
+      {
+        barcode: '4103003286320',
+        name: "Pringles",
+        price: faker.commerce.price(1, 100, 2),
+        stock: faker.random.number()
+      },
     ];
 
     for (country of countries) {
