@@ -3,10 +3,29 @@ const faker = require('faker');
 const moment=require('moment');
 
 function populateProduct() {
-    const fakeProducts = [];
     const countries = [ "010", "300", "410", "500"];
     const suppliers = [ "1001", "3003", "4004", "8008"];
     const products = [ "11111", "22222", "33333", "44444"];
+    const fakeProducts = [
+      {
+        barcode: '0101001123450',
+        name: "Coca Cola Bottle 50cl",
+        price: faker.commerce.price(1, 100, 2),
+        stock: faker.random.number()
+      },
+      {
+        barcode: '3001001987656',
+        name: "Evian 33cl",
+        price: faker.commerce.price(1, 100, 2),
+        stock: faker.random.number()
+      },
+      {
+        barcode: '3008008429486',
+        name: "Nutella 825g",
+        price: faker.commerce.price(1, 100, 2),
+        stock: faker.random.number()
+      },
+    ];
 
     for (country of countries) {
       for (supplier of suppliers) {
