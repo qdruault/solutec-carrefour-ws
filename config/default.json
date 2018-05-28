@@ -9,5 +9,9 @@
     "dialect": "mysql",
     "logging": false,
     "port": 3306
+  },
+  "socket" : {
+    "url": "http://172.20.10.5:3030",
+    "port": 3030
   }
 }
