@@ -12,5 +12,10 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'Product'
     })
 
+    Product.associate = function(models) {
+        // Relation avec la table Order.
+        models.Product.belongsToMany(models.Order, { through: 'order_product' })
+    }
+
     return Product;
 }

@@ -13,11 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Order.associate = function(models) {
         // Relation avec la table Product.
-        models.Order.belongsToMany(models.Product, {
-          through: "order_product",
-          timestamps: false,
-          freezeTableName: true,
-        })
+        models.Order.belongsToMany(models.Product, { through: 'order_product' })
     }
 
     return Order;
