@@ -2,15 +2,30 @@ const Coworker = require('../models').Coworker;
 const faker = require('faker');
 
 function populateCoworker() {
-    const fakeCoworkers = []
-    for (i = [0]; i < 10; i++) {
-        fakeCoworkers[i] = {
-            lastName: faker.name.lastName(),
-            firstName: faker.name.firstName(),
-            email: faker.internet.email(),
-            isManager: faker.random.boolean()
-        }
-    }
+    const fakeCoworkers = [
+      {
+        lastName: "Dupont",
+        firstName: "Jean",
+        isManager: faker.random.boolean()
+      },
+      {
+        lastName: "Dubois",
+        firstName: "Rémi",
+        isManager: faker.random.boolean()
+      },
+      {
+        lastName: "Martin",
+        firstName: "Jean",
+        isManager: faker.random.boolean()
+      },
+      {
+        lastName: "Lefevebre",
+        firstName: "Louis",
+        isManager: faker.random.boolean()
+      },
+
+    ];
+    
     return Coworker.bulkCreate(fakeCoworkers);
 }
 
