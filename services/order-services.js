@@ -22,3 +22,11 @@ exports.addProductToOrder = function(idOrder, productBarcode) {
       isAdded: true
     }))
 }
+
+// Valide une commande.
+exports.updateOrderDone = function(idOrder) {
+  return Order.findById(idOrder)
+    .then(order => order && order.update({
+      isDone: true
+    }))
+}
