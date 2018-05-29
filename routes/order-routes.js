@@ -5,10 +5,22 @@ const multer = require('multer');
 const passport = require('passport');
 
 // Import des méthodes.
-const { getAllOrders } = require('../services/order-services');
+const { getAllOrders, addProductToOrder } = require('../services/order-services');
 
 // Récupère toutes les commandes non traitées.
 router.get('/', passport.authenticate('jwt', {session: false}), (req, res) => getAllOrders()
+    .then(result => res.json(result))
+    .catch(err => {
+        if(err.code) {
+            res.status(err.code).json(err.message)
+        } else {
+            res.status(400).json(err)
+        }
+    })
+);
+
+// Valide un article d'une commande.
+router.put('/:idOrder/addProduct/:barcodeProduct', passport.authenticate('jwt', {session: false}), (req, res) => addProductToOrder(req.params.idOrder, req.params.barcodeProduct)
     .then(result => res.json(result))
     .catch(err => {
       console.log(err);
