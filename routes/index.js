@@ -4,6 +4,7 @@ const problemRoutes = require('./problem-routes')
 const productRoutes = require('./product-routes')
 const supplierRoutes = require('./supplier-routes')
 const authRoutes = require('./auth-routes')
+const orderRoutes = require('./order-routes')
 
 // Crétaion des routes.
 module.exports = function createRoutes(app) {
@@ -15,5 +16,6 @@ module.exports = function createRoutes(app) {
     app.use('/problem', problemRoutes);
     app.use('/product', productRoutes);
     app.use('/supplier', supplierRoutes);
+    app.use('/order', orderRoutes);
 
 };

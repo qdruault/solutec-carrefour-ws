@@ -5,7 +5,6 @@ function populateOrder() {
     const fakeOrders = [
       { idClient: 1 },
       { idClient: 2 },
-      { idClient: 3 },
     ];
 
     return Order.bulkCreate(fakeOrders);
